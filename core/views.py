@@ -30,6 +30,6 @@ def send_email_mrbee(request):
         fail_silently=False,
     )
     
-    time.sleep(5)
+    time.sleep(3)
     
     return HttpResponseRedirect("/")
