@@ -22,12 +22,11 @@ def send_email_mrbee(request):
     message = request.POST.get('message')
     
     send_mail(
-        f'Olá, me chamo {name, email}',
-        f'{message}',
+        f'Olá, me chamo {name}',
+        f'{message}, meu e-mail {email}',
         'mrbeedeliveryp@gmail.com',
         ['mrbeedeliveryp@gmail.com'],
         fail_silently=False,
     )
     
     return render(request, 'index.html')
-
