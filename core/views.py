@@ -1,7 +1,8 @@
-from django.core.checks import messages
 from django.shortcuts import render
 from core.models import Entregadore, Parceiro
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+import time
 
 
 def home(request):
@@ -29,4 +30,6 @@ def send_email_mrbee(request):
         fail_silently=False,
     )
     
-    return render(request, 'index.html')
+    time.sleep(5)
+    
+    return HttpResponseRedirect("/")
