@@ -61,7 +61,7 @@
 
     <div class="entregue" id="entregadores">
         <div class="owl-carousel owl-theme">
-            {% for model in models %}
+            {% for model in model_entregador %}
             <div class="col-sm-4">
 
                 <div class="item">
@@ -80,6 +80,28 @@
     </div>
 
 
+    <h2 class="text-entregadores">
+        <strong style="font-weight: 300;"> Nossos </strong> <strong style="font-weight: 500;">parceiros</strong>
+    </h2>
+
+    <div class="entregue" id="">
+        <div class="owl-carousel owl-theme">
+            {% for model in model_parceiro %}
+            <div class="col-sm-4">
+
+                <div class="item">
+
+                    <img class="img-entregador" src="{{ model.imageURL }}" alt="">
+
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
     <div class="wrapper rounded d-flex align-items-stretch">
         <div class="bg-yellow">
             <div class="text-white"> <span class="far fa-envelope"></span> </div>
@@ -88,16 +110,21 @@
         </div>
         <div class="contact-form" id="contato">
             <div class="h3">Entre em contato</div>
-            <form>
+
+            <form action="{% url 'send' %}" method="POST"> {% csrf_token %}
                 <div class="form-group pt-3"> <label for="message">Menssagem</label> <textarea name="message" class="form-control" required></textarea> </div>
                 <div class="d-flex align-items-center flex-wrap justify-content-between pt-4">
                     <div class="form-group pt-lg-2 pt-3"> <label for="name">Seu nome</label> <input type="text" name="name" class="form-control" required> </div>
                     <div class="form-group pt-lg-2 pt-3"> <label for="name">Seu E-mail</label> <input type="email" name="email" class="form-control" required> </div>
                 </div>
                 <div class="d-flex align-items-center flex-wrap justify-content-between pt-lg-5 mt-lg-4 mt-5">
-                    <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> Enviar </div>
+                    <button type="submit" class="btn btn-primary">
+                        Enviar
+                    </button>
+                    <!-- <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> Enviar </div> -->
                 </div>
             </form>
+
         </div>
     </div>
     <!-- Modal -->
@@ -113,7 +140,6 @@
             </div>
         </div>
     </div>
-
 
     <footer class="text-center text-lg-start text-muted">
         <!-- Section: Social media -->

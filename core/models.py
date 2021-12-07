@@ -16,3 +16,16 @@ class Entregadore(models.Model):
     
     def __str__(self):
         return self.nome
+    
+    
+class Parceiro(models.Model):
+    imagem = models.ImageField()
+    
+    @property
+    def imageURL(self):
+        try:
+            url = self.imagem.url
+        except:
+            url = ''
+        return url
+        
