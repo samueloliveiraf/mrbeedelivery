@@ -8,8 +8,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="mrbee, delivery, patos-pb, paraíba" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- SEO Geral -->
+    <meta name="description" content="Somos uma empresa comprometida com nossos clientes, sempre garantindo a sua entrega!">
+    <link rel="canonical" href="site">
+    <meta name="robots" content="index">
+
+    <!-- Google+ / Schema.org -->
+    <meta itemprop="name" content="Mrbee Delivery">
+    <meta itemprop="description" content="Somos uma empresa comprometida com nossos clientes, sempre garantindo a sua entrega!">
+    <meta itemprop="image" content="#logo">
+
+    <!-- Open Graph Facebook -->
+    <meta property="og:title" content="Mrbee Delivery">
+    <meta property="og:description" content="Somos uma empresa comprometida com nossos clientes, sempre garantindo a sua entrega!" />
+    <meta property="og:url" content="site">
+    <meta property="og:site_name" content="Mrbee Delivery" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="#logo">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/owl/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl/owl.theme.default.min.css' %}">
@@ -27,7 +49,7 @@
 
     <nav class="navbar navbar-expand-lg bg-green">
         <div class="container-fluid">
-            <a class="navbar-brand" href=""><img src="/static/img/logo.png" height="53px" alt=""></a>
+            <a class="navbar-brand" href=""><img src="/static/img/logo-1.png" height="53px" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -38,6 +60,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#entregadores">Entregadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parceiros">Parceiros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
@@ -55,11 +80,11 @@
         </div>
     </section>
 
-    <h2 class="text-entregadores">
+    <h2 class="text-entregadores" id="entregadores">
         <strong style="font-weight: 300;"> Nosso </strong> <strong style="font-weight: 500;">time</strong>
     </h2>
 
-    <div class="entregue" id="entregadores">
+    <div class="entregue">
         <div class="owl-carousel owl-theme">
 
             <div class="col-sm-4">
@@ -122,18 +147,17 @@
 
     </div>
 
-
-    <h2 class="text-entregadores">
+    <h2 class="text-entregadores" id="parceiros">
         <strong style="font-weight: 300;"> Nossos </strong> <strong style="font-weight: 500;">parceiros</strong>
     </h2>
 
-    <div class="entregue" id="">
+    <div class="entregue">
         <div class="owl-carousel owl-theme">
 
             <div class="col-sm-4">
 
                 <div class="item">
-                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064047-7fea3110-e3df-49fc-8965-bd7f66ca828d.jpeg" alt="">
+                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102961-d8f234a6-92da-492b-a5bd-584d8eb26bc5.png" alt="">
                 </div>
 
             </div>
@@ -141,7 +165,7 @@
             <div class="col-sm-4">
 
                 <div class="item">
-                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064273-59113133-639a-4f39-a03a-40b23751c01d.jpeg" alt="">
+                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102234-26bf6e9a-c5a6-4b4c-90c7-517b80dab94b.png" alt="">
                 </div>
 
             </div>
@@ -165,7 +189,7 @@
             <div class="col-sm-4">
 
                 <div class="item">
-                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064999-10ca892d-bcd6-4c99-8132-5b1f3c619ef0.jpeg" alt="">
+                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102497-cbb6603c-a167-403e-bcc3-2bbee41e556c.png" alt="">
                 </div>
 
             </div>
@@ -240,7 +264,7 @@
             <div class="col-sm-4">
 
                 <div class="item">
-                    <img class="img-entregador" src="  https://user-images.githubusercontent.com/44476076/145067672-997e7aec-8399-4822-9dfa-4de2fb858e5b.jpeg" alt="">
+                    <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145067672-997e7aec-8399-4822-9dfa-4de2fb858e5b.jpeg" alt="">
                 </div>
 
             </div>
@@ -248,26 +272,39 @@
         </div>
     </div>
 
+    <h2 class="text-entregadores" id="contato">
+        <strong style="font-weight: 300;"> Nosso </strong> <strong style="font-weight: 500;">contato</strong>
+    </h2>
+
     <div class="wrapper rounded d-flex align-items-stretch">
         <div class="bg-yellow">
             <div class="text-white"> <span class="far fa-envelope"></span> </div>
             <div class="pt-5 cursive"> Precisamos do seu e-mail para entrar em contato com você de volta </div>
             <div class="pt-sm-5 pt-5 cursive mt-sm-5"> Muito obrigado por entrar em contato </div>
         </div>
-        <div class="contact-form" id="contato">
+        <div class="contact-form">
             <div class="h3">Entre em contato</div>
 
             <form action="{% url 'send' %}" method="POST"> {% csrf_token %}
                 <div class="form-group pt-3"> <label for="message">Menssagem</label> <textarea name="message" class="form-control" required></textarea> </div>
                 <div class="d-flex align-items-center flex-wrap justify-content-between pt-4">
-                    <div class="form-group pt-lg-2 pt-3"> <label for="name">Seu nome</label> <input type="text" name="name" class="form-control" required> </div>
-                    <div class="form-group pt-lg-2 pt-3"> <label for="name">Seu E-mail</label> <input type="email" name="email" class="form-control" required> </div>
+                    <div class="form-group pt-lg-2 pt-3">
+                        <label for="name">Seu nome</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group pt-lg-2 pt-3">
+                        <label for="name">Seu e-mail</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group pt-lg-2 pt-3">
+                        <label for="name">Seu número</label>
+                        <input type="number" name="number" class="form-control" required>
+                    </div>
                 </div>
-                <div class="d-flex align-items-center flex-wrap justify-content-between pt-lg-5 mt-lg-4 mt-5">
+                <div style="margin-top: -28px;" class="d-flex align-items-center flex-wrap justify-content-between pt-lg-5">
                     <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                         Enviar
                     </button>
-                    <!-- <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> Enviar </div> -->
                 </div>
             </form>
 

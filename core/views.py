@@ -21,10 +21,11 @@ def send_email_mrbee(request):
     email = request.POST.get('email')
     name = request.POST.get('name')
     message = request.POST.get('message')
+    number = request.POST.get('number')
     
     send_mail(
         f'Olá, me chamo {name}',
-        f'{message}, meu e-mail {email}',
+        f'{message}, meu número {number}, meu e-mail {email}',
         'mrbeedeliveryp@gmail.com',
         ['mrbeedeliveryp@gmail.com'],
         fail_silently=False,
