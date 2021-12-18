@@ -40,6 +40,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link rel="stylesheet" href="{% static 'css/owl/owl.carousel.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl/owl.theme.default.min.css' %}">
+
 </head>
 
 <body>
@@ -73,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="/static/img/bg-1.png" alt="Unsplashed background img 1"></div>
+        <div class="parallax"><img src="/static/img/entrega.png" alt="Unsplashed background img 1"></div>
     </div>
 
 
@@ -88,9 +93,9 @@
                             Nossos entregadores
                         </h4>
 
-                        <div class="carousel">
+                        <div class="owl-carousel owl-theme">
 
-                            <div class="carousel-item">
+                            <div class="item">
 
                                 <p class="text-1-entregadores">
                                     Rafael Oliveira
@@ -99,7 +104,7 @@
 
                             </div>
 
-                            <div class="carousel-item">
+                            <div class="item">
                                 <p class="text-1-entregadores">
                                     Luiz Felipe
                                 </p>
@@ -107,7 +112,7 @@
 
                             </div>
 
-                            <div class="carousel-item">
+                            <div class="item">
                                 <p class="text-1-entregadores">
                                     Lucas
                                 </p>
@@ -115,7 +120,7 @@
 
                             </div>
 
-                            <div class="carousel-item">
+                            <div class="item">
                                 <p class="text-1-entregadores">
                                     Kleison
                                 </p>
@@ -141,97 +146,95 @@
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="/static/img/bg-11.png" alt="Unsplashed background img 3"></div>
+        <div class="parallax"><img src="/static/img/entrega.png" alt="Unsplashed background img 3"></div>
     </div>
 
-    <div class="container">
-        <div class="section">
+    <section id="demos">
+        <div class="row">
+            <div class="large-12 columns">
 
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="icon-block">
-                        <h4 class="text-entregadores" id="parceiros">
-                            Nossos parceiros
-                        </h4>
 
-                        <div class="carousel">
+                <!--   Icon Section   -->
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102961-d8f234a6-92da-492b-a5bd-584d8eb26bc5.png" alt="">
-                            </div>
+                <h4 class="text-entregadores" id="parceiros">
+                    Nossos parceiros
+                </h4>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102234-26bf6e9a-c5a6-4b4c-90c7-517b80dab94b.png" alt="">
-                            </div>
+                <div class="owl-carousel owl-theme">
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064904-c0369fd4-1d09-4de4-86d8-f18d6b7594e6.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102961-d8f234a6-92da-492b-a5bd-584d8eb26bc5.png" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064913-8935cad6-bbf9-4c9e-b386-0f4e88da9748.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102234-26bf6e9a-c5a6-4b4c-90c7-517b80dab94b.png" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102497-cbb6603c-a167-403e-bcc3-2bbee41e556c.png" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064904-c0369fd4-1d09-4de4-86d8-f18d6b7594e6.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065007-cf9f4304-a0be-42ed-90fb-227a4742931f.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064913-8935cad6-bbf9-4c9e-b386-0f4e88da9748.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145068638-cc287b65-a2d1-4289-a23a-434cba066f05.png" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102497-cbb6603c-a167-403e-bcc3-2bbee41e556c.png" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065013-3087888c-e8f2-453a-b384-a828bf89dea0.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065007-cf9f4304-a0be-42ed-90fb-227a4742931f.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065017-52684585-8d46-443d-b193-a3cbfcc1555f.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145068638-cc287b65-a2d1-4289-a23a-434cba066f05.png" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065020-717a4edb-b6d0-4e10-83bd-f35e304010b6.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065013-3087888c-e8f2-453a-b384-a828bf89dea0.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065022-592df299-71a6-4865-9d77-41d9a376478f.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065017-52684585-8d46-443d-b193-a3cbfcc1555f.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065024-9f1ff0b2-68a7-4261-bbb2-57ac60bd67ea.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065020-717a4edb-b6d0-4e10-83bd-f35e304010b6.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065028-540da425-fdcf-47ea-b121-b1fc2806f40d.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065022-592df299-71a6-4865-9d77-41d9a376478f.jpeg" alt="">
+                    </div>
 
-                            <div class="carousel-item">
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145067672-997e7aec-8399-4822-9dfa-4de2fb858e5b.jpeg" alt="">
-                            </div>
+                    <div class="item">
+                        <img class="" src="https://user-images.githubusercontent.com/44476076/145065024-9f1ff0b2-68a7-4261-bbb2-57ac60bd67ea.jpeg" alt="">
+                    </div>
 
-                        </div>
+                    <div class="item">
+                        <img class="" src="https://user-images.githubusercontent.com/44476076/145065028-540da425-fdcf-47ea-b121-b1fc2806f40d.jpeg" alt="">
+                    </div>
 
+                    <div class="item">
+                        <img class="" src="https://user-images.githubusercontent.com/44476076/145067672-997e7aec-8399-4822-9dfa-4de2fb858e5b.jpeg" alt="">
                     </div>
 
                 </div>
+
             </div>
 
         </div>
-    </div>
+    </section>
+
 
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
             <div class="container">
                 <div class="row center">
-                    <h5 class="header col s12 light">Sua entrega de Delivery sempre garantidade!</h5>
+                    <h5 class="header col s12 light">Sua entrega de Delivery sempre garantida!</h5>
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="/static/img/bg-1.png" alt="Unsplashed background img 3"></div>
+        <div class="parallax"><img src="/static/img/entrega.png" alt="Unsplashed background img 3"></div>
     </div>
 
     <div class="container">
@@ -240,9 +243,9 @@
             <div class="row">
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4 id="contato" class="text-entregadores">Entre em contato</h4>
+                    <h4 id="contato" class="text-entregadores">Seja um entregador!</h4>
                     <div class="row">
-                        <form class="col s12" action="{% url 'send' %}" method="POST"> {% csrf_token %}
+                        <form class="col s12" action="{% url 'send' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
                             <div class="row">
                                 <div class="input-field col s6">
                                     <input name="name" id="name" type="text" class="validate">
@@ -259,9 +262,18 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>Anexar CNH</span>
+                                    <input name="cnh" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" name="cnh">
+                                </div>
+                            </div>
                             <button type="submit" data-bs-toggle="modal" data-bs-target="#myModal" class="waves-effect waves-light btn"> 
-                            Enviar
-                          </button>
+                                Enviar
+                            </button>
 
                         </form>
                     </div>
@@ -324,12 +336,29 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('.carousel').carousel();
-        });
-    </script>
 
 </body>
+
+<script src="{% static 'js/owl/jquery.min.js' %}"></script>
+<script src="{% static 'js/owl/owl.carousel.min.js' %}"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    })
+</script>
 
 </html>
