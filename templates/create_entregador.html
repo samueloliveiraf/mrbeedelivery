@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block main %}
+<div class="container">
+
+    <h5 class="text-entregadores" id="entregadores">
+        Formulário de Cadastro
+    </h5>
+
+    <div class="row">
+        <form enctype="multipart/form-data" class="col s12" method="POST"> {% csrf_token %}
+
+            <tr>
+                <th><label style="font-size: medium;" for="id_nome">Nome, Sobrenome:</label></th>
+                <td><input type="text" name="nome" maxlength="200" required id="id_nome"></td>
+            </tr>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Sua foto</label>
+                <input class="form-control" type="file" name="imagem" accept="image/*" required id="id_imagem" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Imagem CNH</label>
+                <input class="form-control" type="file" name="cnh" accept="image/*" id="id_cnh" id="formFileMultiple" multiple>
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Documento da Moto</label>
+                <input class="form-control" type="file" accept="image/*" name="doc_moto" id="id_doc_moto" id="formFileMultiple" multiple>
+            </div>
+
+            <br>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
+                <i class="material-icons right">send</i>
+            </button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

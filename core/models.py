@@ -2,11 +2,23 @@ from django.db import models
 
 
 class Entregadore(models.Model):
-    nome = models.CharField(max_length=200)
-    historia = models.CharField(max_length=200)
-    imagem = models.ImageField()
-    cnh = models.ImageField()
-    doc_moto = models.FileField()
+    nome = models.CharField(
+        max_length=200,
+        verbose_name='Nome'
+    )
+    imagem = models.ImageField(
+        verbose_name='Sua foto'
+    )
+    cnh = models.ImageField(
+        null=True, 
+        blank=True,
+        verbose_name='Imagem CNH'
+    )
+    doc_moto = models.FileField(
+        null=True, 
+        blank=True,
+        verbose_name='Imagem documento da Moto'
+    )
     
     @property
     def imageURL(self):

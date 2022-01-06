@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from .models import Entregadore, Parceiro
-from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
-import time
+from django.views.generic import (
+    CreateView
+)
+from django.urls import reverse_lazy
 
 
 def home(request):
@@ -15,6 +16,20 @@ def home(request):
     }
     
     return render(request, 'index.html', context)
+
+
+class CrieteViewEntregador(CreateView):
+    template_name = 'create_entregador.html'
+    model = Entregadore
+    
+    fields = [
+        'nome',
+        'imagem',
+        'cnh',
+        'doc_moto'
+    ]
+    
+    success_url = reverse_lazy('home')
 
 
 # def send_email_mrbee(request):

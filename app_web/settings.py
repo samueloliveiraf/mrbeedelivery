@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-import  dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e4_qb^mry78@73=aaf7+wqzx9atc1h8m82^0o+2m*#(z#bunvk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=False
+DEBUG=True
 
 ALLOWED_HOSTS = ['localhost', '104.238.135.154', 'mrbeedelivery.online']
 
