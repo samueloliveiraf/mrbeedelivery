@@ -16,11 +16,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='entregadore',
-            name='cnh',
-            field=models.ImageField(blank=True, null=True, upload_to='', verbose_name='Imagem CNH'),
-        ),
-        migrations.AddField(
-            model_name='entregadore',
             name='doc_moto',
             field=models.FileField(blank=True, null=True, upload_to='', verbose_name='Imagem documento da Moto'),
         ),
