@@ -64,7 +64,9 @@
                 <li><a href="#parceiros">Parceiros</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="material-icons">storage</i>
+            </a>
         </div>
     </nav>
 
@@ -95,38 +97,16 @@
 
                         <div class="owl-carousel owl-theme">
 
+                            {% for ent in entregadores %}
                             <div class="item">
 
                                 <p class="text-1-entregadores">
-                                    Rafael Oliveira
+                                    {{ ent.nome }}
                                 </p>
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065106-dd47f3ae-bb63-4360-900f-06268a67c35e.jpeg" alt="">
+                                <img class="img-entregador" src="{{ ent.imageURL }}" alt="">
 
                             </div>
-
-                            <div class="item">
-                                <p class="text-1-entregadores">
-                                    Luiz Felipe
-                                </p>
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065112-aa747e38-d90f-4ed1-bc13-d43c4a574dfa.jpeg" alt="">
-
-                            </div>
-
-                            <div class="item">
-                                <p class="text-1-entregadores">
-                                    Lucas
-                                </p>
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065109-0896a691-d432-4c20-bc00-0f1ef8f21cf9.jpeg" alt="">
-
-                            </div>
-
-                            <div class="item">
-                                <p class="text-1-entregadores">
-                                    Kleison
-                                </p>
-                                <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145068322-b431c469-d3c2-48c7-8f36-5ad6c4451f6a.png" alt="">
-
-                            </div>
+                            {% endfor %}
 
                         </div>
 
@@ -162,61 +142,14 @@
 
                 <div class="owl-carousel owl-theme">
 
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102961-d8f234a6-92da-492b-a5bd-584d8eb26bc5.png" alt="">
-                    </div>
+                    {% for par in parceiros %}
 
                     <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102234-26bf6e9a-c5a6-4b4c-90c7-517b80dab94b.png" alt="">
+                        <img class="img-entregador" src="{{ par.imageURL }}" alt="">
                     </div>
 
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064904-c0369fd4-1d09-4de4-86d8-f18d6b7594e6.jpeg" alt="">
-                    </div>
+                    {% endfor %}
 
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145064913-8935cad6-bbf9-4c9e-b386-0f4e88da9748.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145102497-cbb6603c-a167-403e-bcc3-2bbee41e556c.png" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065007-cf9f4304-a0be-42ed-90fb-227a4742931f.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145068638-cc287b65-a2d1-4289-a23a-434cba066f05.png" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065013-3087888c-e8f2-453a-b384-a828bf89dea0.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065017-52684585-8d46-443d-b193-a3cbfcc1555f.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065020-717a4edb-b6d0-4e10-83bd-f35e304010b6.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="img-entregador" src="https://user-images.githubusercontent.com/44476076/145065022-592df299-71a6-4865-9d77-41d9a376478f.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="" src="https://user-images.githubusercontent.com/44476076/145065024-9f1ff0b2-68a7-4261-bbb2-57ac60bd67ea.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="" src="https://user-images.githubusercontent.com/44476076/145065028-540da425-fdcf-47ea-b121-b1fc2806f40d.jpeg" alt="">
-                    </div>
-
-                    <div class="item">
-                        <img class="" src="https://user-images.githubusercontent.com/44476076/145067672-997e7aec-8399-4822-9dfa-4de2fb858e5b.jpeg" alt="">
-                    </div>
 
                 </div>
 
@@ -245,7 +178,7 @@
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4 id="contato" class="text-entregadores">Seja um entregador!</h4>
                     <div class="row">
-                        <form class="col s12" action="{% url 'send' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                        <form class="col s12" action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
                             <div class="row">
                                 <div class="input-field col s6">
                                     <input name="name" id="name" type="text" class="validate">
@@ -262,6 +195,7 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
+
                             <div class="file-field input-field">
                                 <div class="btn">
                                     <span>Anexar CNH</span>
@@ -271,6 +205,16 @@
                                     <input class="file-path validate" name="cnh">
                                 </div>
                             </div>
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>Anexar Documentação da moto</span>
+                                    <input name="doc" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" name="doc">
+                                </div>
+                            </div>
+
                             <button type="submit" data-bs-toggle="modal" data-bs-target="#myModal" class="waves-effect waves-light btn"> 
                                 Enviar
                             </button>
