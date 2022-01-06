@@ -41,6 +41,7 @@ class Entregadore(models.Model):
     
     
 class Parceiro(models.Model):
+    nome = models.CharField(max_length=200)
     imagem = models.ImageField()
     
     @property

@@ -34,6 +34,18 @@ class CrieteViewEntregador(CreateView):
     success_url = reverse_lazy('home')
 
 
+class CrieteViewEmpresa(CreateView):
+    template_name = 'create_parceiro.html'
+    model = Entregadore
+    
+    fields = [
+        'nome',
+        'imagem'
+    ]
+    
+    success_url = reverse_lazy('home')
+
+
 # def send_email_mrbee(request):
 #     email = request.POST.get('email')
 #     name = request.POST.get('name')

@@ -1,7 +1,12 @@
 
 from django.contrib import admin
 from django.urls import path
-from core.views import home, CrieteViewEntregador
+from core.views import (
+    home, 
+    CrieteViewEntregador, 
+    CrieteViewEmpresa
+)
+
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -12,6 +17,10 @@ urlpatterns = [
     path('cadastro/', 
         CrieteViewEntregador.as_view(), 
         name='create_entregador'
+    ),
+    path('cadastro/', 
+        CrieteViewEmpresa.as_view(), 
+        name='create_empresa'
     ),
     path('', home, name='home')
 ]
