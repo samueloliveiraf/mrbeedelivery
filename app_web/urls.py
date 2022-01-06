@@ -18,7 +18,7 @@ urlpatterns = [
         CrieteViewEntregador.as_view(), 
         name='create_entregador'
     ),
-    path('cadastro/', 
+    path('cadastro-empresa/', 
         CrieteViewEmpresa.as_view(), 
         name='create_empresa'
     ),
