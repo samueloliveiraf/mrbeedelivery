@@ -5,6 +5,8 @@ class Entregadore(models.Model):
     nome = models.CharField(max_length=200)
     historia = models.CharField(max_length=200)
     imagem = models.ImageField()
+    cnh = models.ImageField()
+    doc_moto = models.FileField()
     
     @property
     def imageURL(self):
