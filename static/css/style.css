@@ -75,6 +75,10 @@ footer.page-footer {
 .text-entregadores {
     color: #26a69a;
     text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 .img-entregador {
