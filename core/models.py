@@ -6,6 +6,14 @@ class Entregadore(models.Model):
         max_length=200,
         verbose_name='Nome'
     )
+    endereco = models.CharField(
+        max_length=200,
+        verbose_name='Endereço'
+    )
+    telefone = models.DecimalField(
+        max_digits=14,
+        decimal_places=0
+    )
     imagem = models.ImageField(
         verbose_name='Sua foto'
     )

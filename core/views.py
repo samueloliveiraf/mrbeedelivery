@@ -24,9 +24,11 @@ class CrieteViewEntregador(CreateView):
     
     fields = [
         'nome',
+        'endereco',
+        'telefone',
         'imagem',
         'cnh',
-        'doc_moto'
+        'doc_moto',
     ]
     
     success_url = reverse_lazy('home')
