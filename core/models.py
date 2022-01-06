@@ -52,3 +52,7 @@ class Parceiro(models.Model):
             url = ''
         return url
         
+    
+    def __str__(self):
+        return self.nome
+        
