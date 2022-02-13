@@ -40,7 +40,8 @@ class CrieteViewEmpresa(CreateView):
     
     fields = [
         'nome',
-        'imagem'
+        'imagem',
+        'telefone'
     ]
     
     success_url = reverse_lazy('home')

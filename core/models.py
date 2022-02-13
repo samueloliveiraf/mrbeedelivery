@@ -43,6 +43,11 @@ class Entregadore(models.Model):
 class Parceiro(models.Model):
     nome = models.CharField(max_length=200)
     imagem = models.ImageField()
+    telefone = models.DecimalField(
+        max_digits=14,
+        decimal_places=0
+    )
+
     
     @property
     def imageURL(self):
